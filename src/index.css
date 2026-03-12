@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+/* CSS untuk PDF - pastikan teks hitam & latar putih */
+.cv-pdf-content {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important; /* ← hilangkan border di PDF */
+  padding: 20mm !important; /* ← margin internal agar tidak mepet */
+  box-sizing: border-box !important;
+}
+
+.cv-pdf-content * {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  border: none !important; /* ← hilangkan semua border */
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.cv-pdf-content h1,
+.cv-pdf-content h2,
+.cv-pdf-content h3,
+.cv-pdf-content p,
+.cv-pdf-content span,
+.cv-pdf-content div {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.cv-pdf-content .border-t-2 {
+  border-top: none !important;
+}
+
+.cv-pdf-content .text-gray-900 {
+  color: #111827 !important;
+}
+
+.cv-pdf-content .text-gray-800 {
+  color: #1f2937 !important;
+}
+
+.cv-pdf-content .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.cv-pdf-content .text-gray-700 {
+  color: #374151 !important;
+}
+
+.cv-pdf-content .text-sm {
+  font-size: 0.875rem !important;
+}
+
+.cv-pdf-content .leading-6 {
+  line-height: 1.5 !important;
+}
+
+.cv-pdf-content .font-bold {
+  font-weight: 700 !important;
+}
+
+.cv-pdf-content .font-semibold {
+  font-weight: 600 !important;
+}
+
+.cv-pdf-content .whitespace-pre-wrap {
+  white-space: pre-wrap !important;
+}
+
+.cv-pdf-content .text-center {
+  text-align: center !important;
+}
+
+.cv-pdf-content .mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.cv-pdf-content .mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.cv-pdf-content .mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
+.cv-pdf-content .pb-6 {
+  padding-bottom: 1.5rem !important;
+}
+
+.cv-pdf-content .pt-3 {
+  padding-top: 0.75rem !important;
+}
+
+.cv-pdf-content .border-t-2 {
+  border-top-width: 0 !important;
+}
+
+@media print {
+  .cv-pdf-content {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 20mm !important;
+  }
+
+  .cv-pdf-content * {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes leave {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.animate-enter {
+  animation: enter 300ms ease-out forwards;
+}
+
+.animate-leave {
+  animation: leave 300ms ease-in forwards;
+}
+
+.template-professional h2 {
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.template-professional h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.25s ease-out;
+}

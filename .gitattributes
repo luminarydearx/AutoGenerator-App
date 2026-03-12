@@ -1,0 +1,19 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto
+
+# Force specific files to always use LF
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+package.json text eol=lf
+package-lock.json text eol=lf
+vite.config.js text eol=lf
+tailwind.config.js text eol=lf
+
+# Dokumen teks lain
+*.txt text eol=lf
