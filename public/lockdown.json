@@ -1,5 +1,8 @@
 {
   "active": false,
+  "lockdownAll": false,
+  "routes": [""],
   "reason": "",
-  "timestamp": ""
+  "mediaUrl": "",
+  "timestamp": 0
 }
