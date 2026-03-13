@@ -81,17 +81,35 @@ function LockdownScreen({ reason, mediaUrl }) {
         </div>
       )}
       {mediaUrl && (
-        <img
-          src={mediaUrl}
-          alt="Maintenance"
-          style={{
-            maxWidth: 400,
-            width: "100%",
-            borderRadius: 12,
-            border: "1px solid rgba(255,255,255,0.1)",
-            marginTop: "0.5rem",
-          }}
-        />
+        <div style={{ marginTop: "1.5rem", maxWidth: 600, width: "100%", margin: "1.5rem auto 0" }}>
+          {mediaUrl.match(/\.(mp4|webm|ogg|mov)$|video\/upload/) ? (
+            <video
+              src={mediaUrl}
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                width: "100%",
+                borderRadius: 16,
+                border: "1px solid rgba(255,255,255,0.1)",
+                boxShadow: "0 20px 40px rgba(0,0,0,0.4)",
+                background: "#000",
+              }}
+            />
+          ) : (
+            <img
+              src={mediaUrl}
+              alt="Maintenance"
+              style={{
+                width: "100%",
+                borderRadius: 16,
+                border: "1px solid rgba(255,255,255,0.1)",
+                boxShadow: "0 20px 40px rgba(0,0,0,0.4)",
+              }}
+            />
+          )}
+        </div>
       )}
       <p style={{ color: "#64748b", fontSize: "0.75rem", marginTop: "2rem" }}>
         Silakan coba lagi nanti atau hubungi administrator.
