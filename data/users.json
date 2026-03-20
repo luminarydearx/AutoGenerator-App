@@ -14,8 +14,8 @@
     "banned": false,
     "createdAt": "2024-01-01T00:00:00.000Z",
     "updatedAt": "2026-03-08T16:05:42.098Z",
-    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774019433/pqmrptw8qm2cssumrosh.png",
-    "qrToken": "9fe2bc168ad142dabb86b78d087783e1"
+    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774027722/kp2qywxfyzhwsmmsdl9m.png",
+    "qrToken": "0c6d390da4834ec9b5929aa9a278f246"
   },
   {
     "id": "68a9c83f-5411-4b23-84c3-a37ba26c4ad3",
@@ -24,19 +24,19 @@
     "firstName": "test",
     "lastName": "testlast",
     "email": "dear@gmail.com",
-    "phone": "+62 838-3852-8124",
+    "phone": "",
     "bio": "",
     "avatar": "https://res.cloudinary.com/dg3awuzug/image/upload/v1773164496/o4ygjvcn7ibz132qr8p3.jpg",
     "role": "user",
     "password": "$2a$10$Vc17JoEvAzKfRs4iot6bl.4Zra2i56pk0pv7COqV4g.W9oAoVFVwW",
     "banned": true,
     "createdAt": "2026-03-08T16:03:14.674Z",
-    "updatedAt": "2026-03-20T15:03:25.469Z",
+    "updatedAt": "2026-03-11T02:13:02.491Z",
     "bannedBy": "owner-001",
     "bannedAt": "2026-03-11T02:13:02.491Z",
     "bannedReason": "Kontol",
-    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774022720/m5qhg7g64fcrtotu6dvc.png",
-    "qrToken": "da207c814dcc4003b1af5197a2a77603"
+    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774027723/xscigpmgi7behac81u58.png",
+    "qrToken": "d104d2f41af84ec9a85748f39cb04362"
   },
   {
     "id": "aa2ff4cd-07c5-430c-8dde-f40579e78865",
@@ -53,8 +53,8 @@
     "banned": false,
     "createdAt": "2026-03-10T12:59:16.684Z",
     "updatedAt": "2026-03-10T12:59:16.684Z",
-    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774022774/kbgmtoyjbjaucnhomdcj.png",
-    "qrToken": "9f8b37b403f0482da872e61252b65af2"
+    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774027724/aaprdvbyjt5etjzytprs.png",
+    "qrToken": "c0ef54a4c11e493c86f3f789fb852f25"
   },
   {
     "id": "ff0bfbff-16ff-4e15-bdc6-6d172848303b",
@@ -70,22 +70,40 @@
     "password": "$2a$10$0FfF2SSb8JXQE7UVBB53xumYKIE/zCYw6FUBxjVmNjfAJ/THeRZWm",
     "banned": false,
     "createdAt": "2026-03-11T02:25:30.293Z",
-    "updatedAt": "2026-03-11T02:25:30.293Z"
+    "updatedAt": "2026-03-11T02:25:30.293Z",
+    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774027725/q0cw5gayw8iknk9gy0bf.png",
+    "qrToken": "2733ba0de3e946b2a7efbbf0b378db0f"
   },
   {
-    "id": "455daa47-4a5e-4890-9651-fd9bdacac1cb",
-    "username": "smadors_ale",
-    "displayName": "SMA Dr Soetomo",
-    "firstName": "SMA",
-    "lastName": "Dr Soetomo",
-    "email": "smadorsmania@gmail.com",
-    "phone": "+62 898 5645 1162",
+    "id": "0210119e-bd70-42ad-8910-4e6ff2963705",
+    "username": "testnew",
+    "displayName": "Test New",
+    "firstName": "Test",
+    "lastName": "New",
+    "email": "testaj@gmail.com",
+    "phone": "",
     "bio": "",
-    "avatar": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774023741/trvsk1d1rfski0jf5boz.jpg",
-    "role": "admin",
-    "password": "$2a$10$OknfAw8q6UsoI9svdqJSUuYBRpGiEPeuDOekr3Yw.FLaXW80zXXfe",
+    "avatar": "",
+    "role": "user",
+    "password": "$2a$10$aEUI8tEWK1FNKP0GUO6n2eKdRZXKYDB8cWmuEjpMR3lhRLtHx4Xt2",
     "banned": false,
-    "createdAt": "2026-03-20T16:23:03.829Z",
-    "updatedAt": "2026-03-20T16:23:03.829Z"
+    "createdAt": "2026-03-20T17:29:40.914Z",
+    "updatedAt": "2026-03-20T17:29:40.914Z"
+  },
+  {
+    "id": "2a3a20e2-1259-4bc1-bbaa-6843d426b188",
+    "username": "testadd",
+    "displayName": "test add",
+    "firstName": "test",
+    "lastName": "add",
+    "email": "ksdsok",
+    "phone": "2898129",
+    "bio": "",
+    "avatar": "",
+    "role": "user",
+    "password": "$2a$10$Ae.KxuBFIBzSUQ4o1AdnZek4OEhICqQrArlH.HkmWhhsGLpzxFnOS",
+    "banned": false,
+    "createdAt": "2026-03-20T17:30:43.428Z",
+    "updatedAt": "2026-03-20T17:30:43.428Z"
   }
 ]
