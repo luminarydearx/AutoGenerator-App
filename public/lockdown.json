@@ -1,5 +1,7 @@
 {
   "active": false,
   "reason": "",
-  "timestamp": ""
+  "timestamp": "",
+  "mediaUrl": "",
+  "routes": [""]
 }

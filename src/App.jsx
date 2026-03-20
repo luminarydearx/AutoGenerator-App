@@ -4,16 +4,18 @@ import {
   Routes,
   Route,
   Navigate,
+  useLocation
 } from "react-router-dom";
 import { LazyMotion, domAnimation } from "framer-motion";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import LoadingSplash from "./components/layout/LoadingSplash";
-import LockdownScreen from "./components/LockdownScreen";
 import InstallPrompt from "./components/ui/InstallPrompt";
 import GlobalAnnounce from "./components/ui/GlobalAnnounce";
 import BugReportModal from "./components/models/BugReportModal";
 import useSeo from "./hooks/useSeo";
+import LockdownCheck from "./components/LockdownCheck";
+import AnnounceModal from "./components/AnnounceModal";
 
 // ✅ Lazy load semua halaman
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -46,35 +48,7 @@ const seoData = {
     description: "Buat surat resmi dengan mudah dan cepat",
     image: "/images/og-image.jpg",
   },
-  // ── FIX: Hapus spasi di akhir URL ─────────────────────────────────
   canonicalUrl: "https://auto-generator-app.vercel.app",
-};
-
-// ── Lockdown state ────────────────────────────────────────────────────
-// ✅ FIX: Tambahkan mediaUrl ke interface dan state
-const useLockdown = () => {
-  const [lockdown, setLockdown] = React.useState({ 
-    active: false, 
-    reason: "",
-    mediaUrl: undefined  // ← TAMBAHKAN INI
-  });
-  
-  React.useEffect(() => {
-    fetch("/lockdown.json", { cache: "no-store" })
-      .then(r => r.json())
-      .then((data) => { 
-        if (data?.active) {
-          setLockdown({ 
-            active: true, 
-            reason: data.reason || "", 
-            mediaUrl: data.mediaUrl  // ← SIMPAN mediaUrl
-          }); 
-        }
-      })
-      .catch(() => {}); // file might not exist
-  }, []);
-  
-  return lockdown;
 };
 
 const useTheme = () => {
@@ -88,7 +62,8 @@ const useTheme = () => {
     const applyTheme = () => {
       let effectiveTheme = theme;
       if (theme === "auto") {
-        effectiveTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        effectiveTheme = window.matchMedia("(prefers-color-scheme: dark)")
+          .matches
           ? "dark"
           : "light";
       }
@@ -121,19 +96,23 @@ const PageLoader = () => (
   <div className="min-h-[60vh] flex items-center justify-center">
     <div className="flex flex-col items-center gap-3">
       <div className="w-10 h-10 rounded-full border-4 border-purple-200 border-t-purple-600 animate-spin" />
-      <p className="text-sm text-gray-500 dark:text-gray-400">Memuat halaman...</p>
+      <p className="text-sm text-gray-500 dark:text-gray-400">
+        Memuat halaman...
+      </p>
     </div>
   </div>
 );
 
 const AppContent = () => {
   const [theme, setTheme] = useTheme();
-  const [showSplash, setShowSplash] = useState(false);
+  const [showSplash, setShowSplash] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return !sessionStorage.getItem("hasVisited");
+  });
   const [isBugModalOpen, setIsBugModalOpen] = useState(false);
   const [hasError, setHasError] = useState(false);
-  
-  // ✅ FIX: lockdown sekarang termasuk mediaUrl
-  const lockdown = useLockdown();
+
+  const location = useLocation();
 
   useEffect(() => {
     const handleUnhandledRejection = (event) => {
@@ -142,21 +121,23 @@ const AppContent = () => {
     };
     window.addEventListener("unhandledrejection", handleUnhandledRejection);
     return () => {
-      window.removeEventListener("unhandledrejection", handleUnhandledRejection);
+      window.removeEventListener(
+        "unhandledrejection",
+        handleUnhandledRejection,
+      );
     };
   }, []);
 
   useEffect(() => {
-    const hasVisited = sessionStorage.getItem("hasVisited");
-    if (!hasVisited) {
-      setShowSplash(true);
+    if (showSplash) {
       const timer = setTimeout(() => {
         setShowSplash(false);
         sessionStorage.setItem("hasVisited", "true");
       }, 2000);
+
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, [showSplash]);
 
   useSeo(seoData);
 
@@ -164,7 +145,9 @@ const AppContent = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
         <div className="text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-          <h2 className="text-2xl font-bold text-red-600 mb-4">Aplikasi Diperbarui</h2>
+          <h2 className="text-2xl font-bold text-red-600 mb-4">
+            Aplikasi Diperbarui
+          </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             Silakan refresh halaman untuk melihat versi terbaru.
           </p>
@@ -183,16 +166,6 @@ const AppContent = () => {
     return <LoadingSplash onDismiss={() => setShowSplash(false)} />;
   }
 
-  // ✅ FIX: Pass mediaUrl ke LockdownScreen
-  if (lockdown.active) {
-    return (
-      <LockdownScreen 
-        reason={lockdown.reason} 
-        mediaUrl={lockdown.mediaUrl}  // ← TAMBAHKAN PROP INI
-      />
-    );
-  }
-
   return (
     <LazyMotion features={domAnimation} strict>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
@@ -203,26 +176,29 @@ const AppContent = () => {
         />
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/surat" element={<SuratGenerator />} />
-              <Route path="/keuangan" element={<KalkulatorUsaha />} />
-              <Route path="/cv" element={<CVGenerator />} />
-              <Route path="/materi" element={<RingkasanMateri />} />
-              <Route path="/admin" element={<AdminLogin />} />
-              <Route
-                path="/admin/announce"
-                element={
-                  <ProtectedRoute>
-                    <AdminDashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="/404" element={<NotFound />} />
-              <Route path="*" element={<Navigate to="/404" replace />} />
-            </Routes>
+            <LockdownCheck currentPath={location.pathname}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/surat" element={<SuratGenerator />} />
+                <Route path="/keuangan" element={<KalkulatorUsaha />} />
+                <Route path="/cv" element={<CVGenerator />} />
+                <Route path="/materi" element={<RingkasanMateri />} />
+                <Route path="/admin" element={<AdminLogin />} />
+                <Route
+                  path="/admin/announce"
+                  element={
+                    <ProtectedRoute>
+                      <AdminDashboard />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path="/404" element={<NotFound />} />
+                <Route path="*" element={<Navigate to="/404" replace />} />
+              </Routes>
+            </LockdownCheck>
           </Suspense>
         </main>
+        <AnnounceModal />
         <Footer />
         <InstallPrompt />
         <GlobalAnnounce />
