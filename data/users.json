@@ -73,21 +73,5 @@
     "updatedAt": "2026-03-11T02:25:30.293Z",
     "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774027725/q0cw5gayw8iknk9gy0bf.png",
     "qrToken": "2733ba0de3e946b2a7efbbf0b378db0f"
-  },
-  {
-    "id": "2a3a20e2-1259-4bc1-bbaa-6843d426b188",
-    "username": "testadd",
-    "displayName": "test add",
-    "firstName": "test",
-    "lastName": "add",
-    "email": "ksdsok",
-    "phone": "2898129",
-    "bio": "",
-    "avatar": "",
-    "role": "user",
-    "password": "$2a$10$Ae.KxuBFIBzSUQ4o1AdnZek4OEhICqQrArlH.HkmWhhsGLpzxFnOS",
-    "banned": false,
-    "createdAt": "2026-03-20T17:30:43.428Z",
-    "updatedAt": "2026-03-20T17:30:43.428Z"
   }
 ]
