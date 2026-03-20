@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 AutoGen - App-win32-x64/
+.env
+.env.*
