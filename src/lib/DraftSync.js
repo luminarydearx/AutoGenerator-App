@@ -61,9 +61,10 @@ const DraftSync = {
     const idx = existing.findIndex(d => d.id === draft.id);
     if (idx >= 0) existing[idx] = { ...existing[idx], ...draft, updatedAt: now };
     else existing.unshift(draft);
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(existing.slice(0, 200))); } catch (error) {
-      console.warn('[DraftSync] Failed to save draft:', error);
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(existing.slice(0, 200))); } catch (e) {
+      console.warn('[DraftSync] Error occurred while saving draft:', e.message);
     }
+    // Send to Saturn (non-blocking)
     pushToSaturn({ draft });
     return draft;
   },
@@ -76,8 +77,8 @@ const DraftSync = {
     try {
       const updated = getAll().filter(d => d.id !== id);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
-    } catch (error) {
-      console.warn('[DraftSync] Failed to delete draft:', error);
+    } catch (e) {
+      console.warn('[DraftSync] Error occurred while deleting draft:', e.message);
     }
   },
 
