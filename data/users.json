@@ -75,22 +75,6 @@
     "qrToken": "2733ba0de3e946b2a7efbbf0b378db0f"
   },
   {
-    "id": "0210119e-bd70-42ad-8910-4e6ff2963705",
-    "username": "testnew",
-    "displayName": "Test New",
-    "firstName": "Test",
-    "lastName": "New",
-    "email": "testaj@gmail.com",
-    "phone": "",
-    "bio": "",
-    "avatar": "",
-    "role": "user",
-    "password": "$2a$10$aEUI8tEWK1FNKP0GUO6n2eKdRZXKYDB8cWmuEjpMR3lhRLtHx4Xt2",
-    "banned": false,
-    "createdAt": "2026-03-20T17:29:40.914Z",
-    "updatedAt": "2026-03-20T17:29:40.914Z"
-  },
-  {
     "id": "2a3a20e2-1259-4bc1-bbaa-6843d426b188",
     "username": "testadd",
     "displayName": "test add",
