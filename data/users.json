@@ -13,9 +13,7 @@
     "password": "$2a$10$jmL6ROMBySXMtXuGFXQG9.wuO91u9Jn0FgHAHlGGWLUkWsrQbK1fa",
     "banned": false,
     "createdAt": "2024-01-01T00:00:00.000Z",
-    "updatedAt": "2026-03-08T16:05:42.098Z",
-    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774027722/kp2qywxfyzhwsmmsdl9m.png",
-    "qrToken": "0c6d390da4834ec9b5929aa9a278f246"
+    "updatedAt": "2026-03-08T16:05:42.098Z"
   },
   {
     "id": "68a9c83f-5411-4b23-84c3-a37ba26c4ad3",
@@ -34,9 +32,7 @@
     "updatedAt": "2026-03-11T02:13:02.491Z",
     "bannedBy": "owner-001",
     "bannedAt": "2026-03-11T02:13:02.491Z",
-    "bannedReason": "Kontol",
-    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774027723/xscigpmgi7behac81u58.png",
-    "qrToken": "d104d2f41af84ec9a85748f39cb04362"
+    "bannedReason": "Kontol"
   },
   {
     "id": "aa2ff4cd-07c5-430c-8dde-f40579e78865",
@@ -52,9 +48,7 @@
     "password": "$2a$10$bs2LUxZqAFt3NaVkyAdFVeIVUfI8hkXWWQfCz2LH6FGF/HK.iF/Nq",
     "banned": false,
     "createdAt": "2026-03-10T12:59:16.684Z",
-    "updatedAt": "2026-03-10T12:59:16.684Z",
-    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774027724/aaprdvbyjt5etjzytprs.png",
-    "qrToken": "c0ef54a4c11e493c86f3f789fb852f25"
+    "updatedAt": "2026-03-10T12:59:16.684Z"
   },
   {
     "id": "ff0bfbff-16ff-4e15-bdc6-6d172848303b",
@@ -70,8 +64,6 @@
     "password": "$2a$10$0FfF2SSb8JXQE7UVBB53xumYKIE/zCYw6FUBxjVmNjfAJ/THeRZWm",
     "banned": false,
     "createdAt": "2026-03-11T02:25:30.293Z",
-    "updatedAt": "2026-03-11T02:25:30.293Z",
-    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774027725/q0cw5gayw8iknk9gy0bf.png",
-    "qrToken": "2733ba0de3e946b2a7efbbf0b378db0f"
+    "updatedAt": "2026-03-11T02:25:30.293Z"
   }
 ]
