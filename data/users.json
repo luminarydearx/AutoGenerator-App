@@ -64,7 +64,7 @@
     "password": "$2a$10$0FfF2SSb8JXQE7UVBB53xumYKIE/zCYw6FUBxjVmNjfAJ/THeRZWm",
     "banned": false,
     "createdAt": "2026-03-11T02:25:30.293Z",
-    "updatedAt": "2026-03-11T02:25:30.293Z"
+    "updatedAt": "2026-03-27T06:13:58.130Z"
   },
   {
     "id": "user_1774591310716_nd9qyt",
@@ -76,10 +76,12 @@
     "phone": "",
     "bio": "",
     "avatar": "",
-    "role": "user",
+    "role": "developer",
     "password": "$2a$10$7OuetQ8Nh0n2X75nGpMr9.itb0IfCc7pCFaBLUd8S73luYUCHWTni",
     "banned": false,
     "createdAt": "2026-03-27T06:01:50.715Z",
-    "updatedAt": "2026-03-27T06:01:50.715Z"
+    "updatedAt": "2026-03-27T06:01:50.715Z",
+    "qrCodeUrl": "https://res.cloudinary.com/dg3awuzug/image/upload/v1774591320/avtzzbjigebpxotmbic3.png",
+    "qrToken": "c6a8df06c02d4c5aa409e7ac5b4e2950"
   }
 ]
