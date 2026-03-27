@@ -65,5 +65,21 @@
     "banned": false,
     "createdAt": "2026-03-11T02:25:30.293Z",
     "updatedAt": "2026-03-11T02:25:30.293Z"
+  },
+  {
+    "id": "user_1774591310716_nd9qyt",
+    "username": "dearlyfebri",
+    "displayName": "Jagad Test",
+    "firstName": "Jagad",
+    "lastName": "Test",
+    "email": "dearlyfebriano09@gmail.com",
+    "phone": "",
+    "bio": "",
+    "avatar": "",
+    "role": "user",
+    "password": "$2a$10$7OuetQ8Nh0n2X75nGpMr9.itb0IfCc7pCFaBLUd8S73luYUCHWTni",
+    "banned": false,
+    "createdAt": "2026-03-27T06:01:50.715Z",
+    "updatedAt": "2026-03-27T06:01:50.715Z"
   }
 ]
