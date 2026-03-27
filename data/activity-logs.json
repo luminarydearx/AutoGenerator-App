@@ -1,0 +1,11 @@
+[
+  {
+    "id": "53vf59jx",
+    "timestamp": "2026-03-27T05:48:22.811Z",
+    "category": "auth",
+    "action": "AUTH_LOGIN",
+    "actor": "dearlyfebriano",
+    "actorRole": "owner",
+    "success": true
+  }
+]
