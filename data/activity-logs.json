@@ -1,5 +1,32 @@
 [
   {
+    "id": "wmc3whv9",
+    "timestamp": "2026-03-27T06:04:44.542Z",
+    "category": "auth",
+    "action": "AUTH_LOGIN",
+    "actor": "dearlyfebriano",
+    "actorRole": "owner",
+    "success": true
+  },
+  {
+    "id": "p7b97zrc",
+    "timestamp": "2026-03-27T06:03:53.809Z",
+    "category": "auth",
+    "action": "AUTH_LOGIN",
+    "actor": "dearlyfebri",
+    "actorRole": "developer",
+    "success": true
+  },
+  {
+    "id": "4yben184",
+    "timestamp": "2026-03-27T06:02:41.840Z",
+    "category": "auth",
+    "action": "AUTH_LOGIN",
+    "actor": "dearlyfebriano",
+    "actorRole": "owner",
+    "success": true
+  },
+  {
     "id": "ef9fkra9",
     "timestamp": "2026-03-27T06:01:50.737Z",
     "category": "user",
