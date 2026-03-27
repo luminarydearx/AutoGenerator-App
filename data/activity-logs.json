@@ -1,5 +1,15 @@
 [
   {
+    "id": "v6d3vj9t",
+    "timestamp": "2026-03-27T05:49:50.805Z",
+    "category": "system",
+    "action": "TASK_CREATE",
+    "actor": "dearlyfebriano",
+    "actorRole": "owner",
+    "detail": "Tombol Reset Password Tidak ada Pada Login Page",
+    "success": true
+  },
+  {
     "id": "53vf59jx",
     "timestamp": "2026-03-27T05:48:22.811Z",
     "category": "auth",
