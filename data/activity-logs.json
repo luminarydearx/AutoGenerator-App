@@ -1,5 +1,14 @@
 [
   {
+    "id": "ef9fkra9",
+    "timestamp": "2026-03-27T06:01:50.737Z",
+    "category": "user",
+    "action": "USER_CREATE",
+    "actor": "dearlyfebri",
+    "actorRole": "user",
+    "success": true
+  },
+  {
     "id": "cq9n53xj",
     "timestamp": "2026-03-27T05:50:17.577Z",
     "category": "system",
